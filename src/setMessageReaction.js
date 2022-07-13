@@ -23,8 +23,10 @@ module.exports = function(defaultFuncs, api, ctx) {
 
     switch (reaction) {
       case "\uD83D\uDE0D": //:heart_eyes:
-      case "\uD83D\uDE06": //:laughing:
       case "\uD83D\uDE2E": //:open_mouth:
+      case "\uD83D\uDE06": //:laughing:
+      case "\uD83D\uDE04": //:laughing:
+      
       case "\uD83D\uDE22": //:cry:
       case "\u1F604":
       case "\uD83D\uDE20": //:angry:
