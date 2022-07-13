@@ -26,7 +26,7 @@ module.exports = function(defaultFuncs, api, ctx) {
       case "\uD83D\uDE06": //:laughing:
       case "\uD83D\uDE2E": //:open_mouth:
       case "\uD83D\uDE22": //:cry:
-      case "u1F604":
+      case "\u1F604":
       case "\uD83D\uDE20": //:angry:
       case "\uD83D\uDC4D": //:thumbsup:
       case "\uD83D\uDC4E": //:thumbsdown:
