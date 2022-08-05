@@ -655,8 +655,8 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
     case "change_thread_theme":
     case "change_thread_nickname":
     case "change_thread_icon":
-      console.log(v.delta);
-      break;
+
+
     case "ThreadName":
     case "ParticipantsAddedToGroupThread":
     case "ParticipantLeftGroupThread":
