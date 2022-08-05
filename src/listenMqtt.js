@@ -503,10 +503,10 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
       return (function () { globalCallback(null, fmtMsg); })();
     case "AdminTextMessage":
       switch (v.delta.type) {
-       /* case "change_thread_theme":
+        case "change_thread_theme":
         case "change_thread_nickname":
         case "change_thread_icon":
-          break;*/
+          break;
         case "group_poll":
           var fmtMsg;
           try {
