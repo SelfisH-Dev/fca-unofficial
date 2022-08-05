@@ -834,6 +834,18 @@ function formatDeltaEvent(m) {
       logMessageType = "log:unsubscribe";
       logMessageData = { leftParticipantFbId: m.leftParticipantFbId };
       break;
+      case "change_thread_nickname":
+      logMessageType = m;
+      logMessageData = { name: m.name };
+      break;
+      case "change_thread_icon":
+      logMessageType = m;
+      logMessageData = { name: m.name };
+      break;
+      case "change_thread_them":
+      logMessageType = m;
+      logMessageData = { name: m.name };
+      break;
   }
 
   return {
