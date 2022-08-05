@@ -824,7 +824,7 @@ function formatDeltaEvent(m) {
       break;
     case "ThreadName":
       logMessageType = "log:thread-name";
-      logMessageData = { name: m.name };
+      logMessageData = { najme: m.name };
       break;
     case "ParticipantsAddedToGroupThread":
       logMessageType = "log:subscribe";
