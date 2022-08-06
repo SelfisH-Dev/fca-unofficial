@@ -93,7 +93,7 @@ function formatThreadGraphQLResponse(data) {
     color:
       messageThread.customization_info &&
       messageThread.customization_info.outgoing_bubble_color
-        ? messageThread.customization_info.outgoing_bubble_color.slice(2)
+        ? messageThread.customization_info.outgoing_bubble_color
         : null,
     nicknames:
       messageThread.customization_info &&
