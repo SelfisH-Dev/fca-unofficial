@@ -645,7 +645,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
               }*/
             } else {
               console.error("forcedFetch", fetchData);
-            }
+            }     return (function () { globalCallback(null, " jjjjj"); })();
           })
           .catch((err) => {
             console.error("forcedFetch", err);
