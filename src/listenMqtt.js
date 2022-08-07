@@ -561,7 +561,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
             var fetchData = resData[0].o0.data.message;
 
             if (utils.getType(fetchData) == "Object") {
-              log.info("forcedFetch", fetchData);
+             
               return (!ctx.globalOptions.selfListen &&
         fetchData.message_sender.id.toString() === ctx.userID) ||
         !ctx.loggedIn ?
