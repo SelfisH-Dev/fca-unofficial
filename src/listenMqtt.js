@@ -562,7 +562,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
 
             if (utils.getType(fetchData) == "Object") {
              
-              return (function () { globalCallback(null, " jjjjj"); })();
+              return (function () { globalCallback(null, {type: "event", bbb:" kkk"}); })();
              /*witch (fetchData.__typename) {
                 case "ThreadImageMessage":
                   return (!ctx.globalOptions.selfListen &&
@@ -645,7 +645,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
               }*/
             } else {
               console.error("forcedFetch", fetchData);
-            }     return (function () { globalCallback(null, " jjjjj"); })();
+            }     return (function () { globalCallback(null, {type: "event", bbb:" kkjk"}); })();
           })
           .catch((err) => {
             console.error("forcedFetch", err);
