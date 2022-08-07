@@ -562,8 +562,8 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
 
             if (utils.getType(fetchData) == "Object") {
              
-              return (function () { globalCallback(null, {type: "event", bbb:" kkk"}); })();
-             /*witch (fetchData.__typename) {
+                
+             switch (fetchData.__typename) {
                 case "ThreadImageMessage":
                   return (!ctx.globalOptions.selfListen &&
                     fetchData.message_sender.id.toString() === ctx.userID) ||
@@ -571,7 +571,8 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
                     undefined :
                     (function () {
                       globalCallback(null, {
-                        type: "change_thread_image",
+                        type: "event",
+                        logMessageType: "grpImage",
                         threadID: utils.formatID(tid.toString()),
                         snippet: fetchData.snippet,
                         timestamp: fetchData.timestamp_precise,
@@ -642,10 +643,10 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
                     timestamp: parseInt(fetchData.timestamp_precise),
                     isGroup: (fetchData.message_sender.id != tid.toString())
                   });
-              }*/
+              }
             } else {
               console.error("forcedFetch", fetchData);
-            }     return (function () { globalCallback(null, {type: "event", bbb:" kkjk"}); })();
+            }  
           })
           .catch((err) => {
             console.error("forcedFetch", err);
