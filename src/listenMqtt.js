@@ -567,7 +567,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
         !ctx.loggedIn ?
         undefined :
         (function () { globalCallback(null, fetchData); })();
-              switch (fetchData.__typename) {
+             /*witch (fetchData.__typename) {
                 case "ThreadImageMessage":
                   return (!ctx.globalOptions.selfListen &&
                     fetchData.message_sender.id.toString() === ctx.userID) ||
@@ -646,7 +646,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
                     timestamp: parseInt(fetchData.timestamp_precise),
                     isGroup: (fetchData.message_sender.id != tid.toString())
                   });
-              }
+              }*/
             } else {
               console.error("forcedFetch", fetchData);
             }
