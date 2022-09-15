@@ -140,7 +140,7 @@ module.exports = function (defaultFuncs, api, ctx) {
       .post("https://www.facebook.com/messaging/send/", ctx.jar, form)
       .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
       .then(function (resData) {
-           console.log("https://www.facebook.com/messaging/send/", ctx.jar, form)
+          // console.log("https://www.facebook.com/messaging/send/", ctx.jar, form)
         if (!resData) {
           return callback({ error: "Send message failed." });
         }
