@@ -83,6 +83,7 @@ module.exports = function (defaultFuncs, api, ctx) {
       )
       .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
       .then(function (resData) {
+      console.log(resData)
         if (resData.error) {
           return callback(resData);
         }
