@@ -210,7 +210,7 @@ module.exports = function (defaultFuncs, api, ctx) {
         if (err) {
           return callback(err);
         }
-
+        console.log(params)
         form["shareable_attachment[share_params]"] = params;
         cb();
       });
