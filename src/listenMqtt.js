@@ -423,7 +423,7 @@ function parseDelta(defaultFuncs, api, ctx, globalCallback, v) {
                 }
 
                 var fetchData = resData[0].o0.data.message;
-
+console.log(fetchData)
                 var mobj = {};
                 for (var n in fetchData.message.ranges) {
                   mobj[fetchData.message.ranges[n].entity.id] = (fetchData.message.text || "").substr(fetchData.message.ranges[n].offset, fetchData.message.ranges[n].length);
