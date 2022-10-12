@@ -252,7 +252,7 @@ module.exports = function (defaultFuncs, api, ctx) {
 };
         form["shareable_attachment[share_params]"] = params;
         cb();
-      });
+      
     } else {
       cb();
     }
