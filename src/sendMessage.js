@@ -207,11 +207,49 @@ module.exports = function (defaultFuncs, api, ctx) {
   function handleUrl(msg, form, callback, cb) {
     if (msg.url) {
       form["shareable_attachment[share_type]"] = "100";
-      getUrl(msg.url, function (err, params) {
+      /*getUrl(msg.url, function (err, params) {
         if (err) {
           return callback(err);
         }
-        console.log(params)
+        console.log(params)*/
+      let params = {
+  "urlInfo": {
+    "canonical": "https://www.facebook.com",
+    "final": "https://www.facebook.com/",
+    "user": "http://www.facebook.com/",
+    "log": {
+      "1663013106": "https://facebook.com",
+      "1665322938": "https://facebook.com",
+      "1665322942": "https://www.facebook.com"
+    },
+    "fb_normalized": "https://www.facebook.com/"
+  },
+  "favicon": "https://www.youtube.com/s/d esktop/5b6d6e40/img/favicon_144x144.png",
+  "external_author": "Escort Alligator",
+  "iframe": [],
+  "title": "YouTube",
+  "summary": "Se alla dina favoriter bland videor och musik, ladda pp originali Innehåll ochdela allt med vänner, famil och hela världen på YouTube.",
+  "images_sorted_by_dom": [],
+  "ranked_images": {
+    "images": [
+      "https://www.youtube.com/img/desktop/yt_1200.png"
+    ],
+    "ranking_model_version": 11,
+    "specified_og": true
+  },
+  "medium": 104,
+  "url": "http://www.facebook.com/",
+  "global_share_id": 39844517747,
+  "video": [],
+  "music": [],
+  "asset_3d_infos": [],
+  "extra": [],
+  "amp_url": "",
+  "url_scrape_id": "1311236139680707",
+  "hmac": "AbfPWqsoKN1INOrU6yQ",
+  "locale": null,
+  "external_img": "{\"src\":\"https:\\/\\/www.youtube.com\\/img/desktop\\/yt_1200 .png\",\"width\":1200,\"height\":1200}"
+};
         form["shareable_attachment[share_params]"] = params;
         cb();
       });
