@@ -207,52 +207,14 @@ module.exports = function (defaultFuncs, api, ctx) {
   function handleUrl(msg, form, callback, cb) {
     if (msg.url) {
       form["shareable_attachment[share_type]"] = "100";
-      /*getUrl(msg.url, function (err, params) {
+      getUrl(msg.url, function (err, params) {
         if (err) {
           return callback(err);
         }
-        console.log(params)*/
-      let params = {
-  "urlInfo": {
-    "canonical": "https://www.facebook.com",
-    "final": "https://www.facebook.com/",
-    "user": "http://www.facebook.com/",
-    "log": {
-      "1663013106": "https://facebook.com",
-      "1665322938": "https://facebook.com",
-      "1665322942": "https://www.facebook.com"
-    },
-    "fb_normalized": "https://www.facebook.com/"
-  },
-  "favicon": "https://www.youtube.com/s/d esktop/5b6d6e40/img/favicon_144x144.png",
-  "external_author": "Escort Alligator",
-  "iframe": [],
-  "title": "YouTube",
-  "summary": "Shishir khashi Youtube",
-  "images_sorted_by_dom": [],
-  "ranked_images": {
-    "images": [
-      "https://www.youtube.com/img/desktop/yt_1200.pnghttps://scontent.xx.fbcdn.net/v/t39.30808-1/309973510_3083874131904747_8532814795989291498_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dbb9e7&_nc_eui2=AeE3zDuPzBIpHnhX_I0SVoJwgxW7ywSk-6WDFbvLBKT7pc5DamwHDo-KFhREfOfMgYcyMzg1XzyPzNWr2bZn3XPM&_nc_ohc=naGtFlPymkgAX_XDVMg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AT9vBo8yjbY30aHF0XnG0Uf1X6ki4b4T-eMBABoDwUn5mQ&oe=634B26B0"
-    ],
-    "ranking_model_version": 11,
-    "specified_og": true
-  },
-  "medium": 104,
-  "url": "http://www.facebook.com/",
-  "global_share_id": 39844517747,
-  "video": [],
-  "music": [],
-  "asset_3d_infos": [],
-  "extra": [],
-  "amp_url": "",
-  "url_scrape_id": "1311236139680707",
-  "hmac": "AbfPWqsoKN1INOrU6yQ",
-  "locale": null,
-  "external_img": "{\"src\":\"https:\\/\\/www.youtube.com\\/img/desktop\\/yt_1200 .png\",\"width\":1200,\"height\":1200}"
-};
+    
         form["shareable_attachment[share_params]"] = params;
         cb();
-      
+     });
     } else {
       cb();
     }
