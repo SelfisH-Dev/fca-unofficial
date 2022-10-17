@@ -157,6 +157,7 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
   });
 
   mqttClient.on('message', function (topic, message, _packet) {
+    console.log(message);
     try {
       var jsonMessage = JSON.parse(message);
     } catch (ex) {
